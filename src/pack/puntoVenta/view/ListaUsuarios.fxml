@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #C6BDC7;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pack.puntoVenta.view.ListaUsuarios">
+   <children>
+      <Button fx:id="but_atrasUs" layoutX="666.0" layoutY="93.0" mnemonicParsing="false" onAction="#backMenu" prefHeight="42.0" prefWidth="120.0" style="-fx-background-radius: 20;" text="Menu" />
+      <TableView fx:id="Table_usuarios" layoutX="52.0" layoutY="188.0" prefHeight="420.0" prefWidth="596.0" style="-fx-background-color: #C6BDC7;">
+        <columns>
+          <TableColumn prefWidth="84.00000762939453" text="ID">
+           <cellValueFactory>
+          <PropertyValueFactory property="id_usuario" />
+          </cellValueFactory>
+          </TableColumn>
+          <TableColumn prefWidth="100.0" text="Nombre">
+           <cellValueFactory>
+          <PropertyValueFactory property="nombreUsuario" />
+          </cellValueFactory>
+          </TableColumn>
+            <TableColumn prefWidth="122.4000244140625" text="Apellido">
+             <cellValueFactory>
+          <PropertyValueFactory property="apellidoUsuario" />
+          </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="287.20001220703125" text="Correo">
+             <cellValueFactory>
+          <PropertyValueFactory property="correo" />
+          </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Label layoutX="114.0" layoutY="39.0" prefHeight="55.0" prefWidth="146.0" text="Usuarios" textFill="#a31e7c">
+         <font>
+            <Font name="Arial Narrow" size="42.0" />
+         </font>
+      </Label>
+      <Button fx:id="but_agregarUs" layoutX="666.0" layoutY="32.0" mnemonicParsing="false" onAction="#agregarUsuario" prefHeight="41.0" prefWidth="120.0" style="-fx-background-radius: 20;" text="Agregar Usuario" />
+      <Button layoutX="659.0" layoutY="631.0" mnemonicParsing="false" onAction="#mostrarLista" prefHeight="41.0" prefWidth="120.0" style="-fx-background-radius: 20;" text="Lista" />
+      <Button layoutX="528.0" layoutY="32.0" mnemonicParsing="false" onAction="#remove" prefHeight="41.0" prefWidth="120.0" style="-fx-background-radius: 20;" text="Eliminar" />
+      <Button layoutX="528.0" layoutY="93.0" mnemonicParsing="false" onAction="#editar" prefHeight="41.0" prefWidth="120.0" style="-fx-background-radius: 20;" text="Editar" />
+      <TextField fx:id="nombreNuevo" layoutX="14.0" layoutY="610.0" promptText="Nombre" visible="false" />
+      <TextField fx:id="apellidoNuevo" layoutX="201.0" layoutY="610.0" promptText="Apellido" visible="false" />
+      <Button fx:id="but_actualizarBase" layoutX="588.0" layoutY="636.0" mnemonicParsing="false" onAction="#agregarBase" text="Ingresar" visible="false" />
+      <TextField fx:id="correoNuevo" layoutX="400.0" layoutY="610.0" promptText="Correo" visible="false" />
+      <TextField fx:id="tipoUsuarioNuevo" layoutX="400.0" layoutY="652.0" promptText="Tipo Usuario" visible="false" />
+      <TextField fx:id="passwordNueva" layoutX="201.0" layoutY="649.0" promptText="Contraseña" visible="false" />
+   </children>
+</AnchorPane>

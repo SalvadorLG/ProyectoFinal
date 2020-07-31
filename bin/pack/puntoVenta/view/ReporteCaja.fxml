@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #C6BDC7;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pack.puntoVenta.view.ReporteCajaController">
+   <children>
+      <TableView fx:id="table_corte" layoutX="23.0" layoutY="226.0" prefHeight="291.0" prefWidth="649.0" style="-fx-background-color: #C6BDC7;">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Id">
+          <cellValueFactory>
+          <PropertyValueFactory property="id" />
+          </cellValueFactory>
+          </TableColumn>
+          <TableColumn prefWidth="195.19995880126953" text="Entrada">
+          <cellValueFactory>
+          <PropertyValueFactory property="entradas" />
+          </cellValueFactory>
+          </TableColumn>
+            <TableColumn prefWidth="176.800048828125" text="Salida ">
+            <cellValueFactory>
+          <PropertyValueFactory property="salidas" />
+          </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="202.40005493164062" text="Restante">
+            <cellValueFactory>
+          <PropertyValueFactory property="restantes" />
+          </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Button layoutX="562.0" layoutY="532.0" mnemonicParsing="false" onAction="#verReporte" prefHeight="43.0" prefWidth="85.0" text="Reporte" />
+      <Label layoutX="197.0" layoutY="34.0" text="Reporte corte de caja" textFill="#a31e7c">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button layoutX="599.0" layoutY="22.0" mnemonicParsing="false" onAction="#backMenu" prefHeight="43.0" prefWidth="70.0" style="-fx-background-radius: 20;" text="Menu" />
+   </children>
+</AnchorPane>

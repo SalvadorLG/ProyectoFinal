@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #C6BDC7;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pack.puntoVenta.view.TicketController">
+   <children>
+      <TableView fx:id="table_ticket" layoutX="25.0" layoutY="202.0" prefHeight="326.0" prefWidth="503.0" style="-fx-background-color: #C6BDC7;">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Cant">
+            <cellValueFactory>
+          <PropertyValueFactory property="cantidadComprar" />
+          </cellValueFactory>
+          </TableColumn>
+          
+          <TableColumn prefWidth="302.39996337890625" text="Nombre">
+          <cellValueFactory>
+          <PropertyValueFactory property="nombreProducto" />
+          </cellValueFactory>
+          </TableColumn>
+            <TableColumn minWidth="0.0" prefWidth="124.79995727539062" text="Precio">
+            <cellValueFactory>
+          <PropertyValueFactory property="precioProducto" />
+          </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Label fx:id="label_ticketFar" layoutX="258.0" layoutY="53.0" prefHeight="42.0" prefWidth="179.0" text="Venta" textFill="#a31e7c">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="but_pagar" layoutX="563.0" layoutY="543.0" mnemonicParsing="false" onAction="#pagar" prefHeight="42.0" prefWidth="90.0" style="-fx-background-radius: 20;" text="Pagar" />
+      <TextField fx:id="buscarProducto" layoutX="38.0" layoutY="121.0" prefHeight="42.0" prefWidth="179.0" promptText="Buscar por Nombre" />
+      <Button layoutX="462.0" layoutY="104.0" mnemonicParsing="false" onAction="#agregarTicket" prefHeight="34.0" prefWidth="71.0" style="-fx-background-radius: 20;" text="Agregar" />
+      <Button fx:id="but_menuTicket" layoutX="599.0" layoutY="14.0" mnemonicParsing="false" onAction="#backMenu" prefHeight="34.0" prefWidth="71.0" style="-fx-background-radius: 20;" text="Menu" />
+      <TextField fx:id="sub" editable="false" layoutX="593.0" layoutY="365.0" prefHeight="34.0" prefWidth="82.0" />
+      <TextField fx:id="iva" editable="false" layoutX="593.0" layoutY="409.0" prefHeight="34.0" prefWidth="82.0" />
+      <TextField fx:id="total" editable="false" layoutX="593.0" layoutY="453.0" prefHeight="34.0" prefWidth="82.0" />
+      <Label layoutX="554.0" layoutY="374.0" text="Sub" />
+      <Label layoutX="554.0" layoutY="417.0" text="IVA" />
+      <Label layoutX="554.0" layoutY="461.0" text="Total" />
+      <TextField fx:id="cantidadProducto" layoutX="246.0" layoutY="121.0" prefHeight="42.0" prefWidth="179.0" promptText="Cantidad" />
+      <Button layoutX="462.0" layoutY="146.0" mnemonicParsing="false" onAction="#buscarProdTicket" prefHeight="34.0" prefWidth="71.0" style="-fx-background-radius: 20;" text="Buscar" />
+      <TextField fx:id="pago" layoutX="593.0" layoutY="493.0" prefHeight="34.0" prefWidth="82.0" />
+      <Label layoutX="554.0" layoutY="501.0" text="Pagar" />
+      <TextField fx:id="text_dineroCaja" layoutX="25.0" layoutY="19.0" />
+      <Button layoutX="191.0" layoutY="19.0" mnemonicParsing="false" onAction="#verDinero" prefHeight="26.0" prefWidth="55.0" text="Corte" />
+   </children>
+</AnchorPane>

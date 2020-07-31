@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #C6BDC7;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pack.puntoVenta.view.FormularioProductoController">
+   <children>
+      <Label fx:id="label_newProd" layoutX="242.0" layoutY="36.0" prefHeight="46.0" prefWidth="256.0" text="Nuevo producto " textFill="#a31e7c">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="text_nombreProd" layoutX="93.0" layoutY="155.0" prefHeight="38.0" prefWidth="154.0" promptText="Nombre " />
+      <TextField fx:id="text_marca" layoutX="293.0" layoutY="155.0" prefHeight="38.0" prefWidth="154.0" promptText="Marca" />
+      <TextField fx:id="text_precioUn" layoutX="93.0" layoutY="238.0" prefHeight="38.0" prefWidth="154.0" promptText="Precio Unitario" />
+      <TextField fx:id="text_cantidad" layoutX="293.0" layoutY="238.0" prefHeight="38.0" prefWidth="154.0" promptText="Cantidad" />
+      <Button fx:id="but_agregarProducto" layoutX="282.0" layoutY="417.0" mnemonicParsing="false" onAction="#addProducto" prefHeight="46.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Agregar" />
+      <Button layoutX="521.0" layoutY="491.0" mnemonicParsing="false" onAction="#backMenu" prefHeight="46.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Menu" />
+      <Button layoutX="418.0" layoutY="491.0" mnemonicParsing="false" onAction="#verLista" prefHeight="46.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Lista" />
+   </children>
+</AnchorPane>

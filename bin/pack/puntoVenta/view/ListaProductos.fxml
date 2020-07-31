@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #C6BDC7;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pack.puntoVenta.view.ListaProductosController">
+   <children>
+      <Label fx:id="label_productosList" layoutX="103.0" layoutY="41.0" prefHeight="62.0" prefWidth="138.0" text="Productos " textFill="#a31e7c">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="but_newProducto" layoutX="516.0" layoutY="34.0" mnemonicParsing="false" onAction="#agregarProductos" prefHeight="47.0" prefWidth="104.0" style="-fx-background-radius: 20;" text="Agregar Nuevo " />
+      <Button fx:id="but_menuProdcuto" layoutX="516.0" layoutY="89.0" mnemonicParsing="false" onAction="#backMenu" prefHeight="47.0" prefWidth="104.0" style="-fx-background-radius: 20;" text="Menu" />
+      <Button layoutX="582.0" layoutY="526.0" mnemonicParsing="false" onAction="#mostrarLista" prefHeight="47.0" prefWidth="104.0" style="-fx-background-radius: 20;" text="lista" />
+      <Button fx:id="but_eliminarProd" layoutX="412.0" layoutY="34.0" mnemonicParsing="false" onAction="#remove" prefHeight="47.0" prefWidth="104.0" style="-fx-background-radius: 20;" text="Eliminar" />
+      <Button layoutX="412.0" layoutY="89.0" mnemonicParsing="false" onAction="#modificarProd" prefHeight="47.0" prefWidth="104.0" style="-fx-background-radius: 20;" text="Modificar" />
+      <TableView fx:id="table_producto" layoutX="21.0" layoutY="153.0" prefHeight="350.0" prefWidth="631.0" style="-fx-background-color: #C6BDC7;">
+        <columns>
+          <TableColumn prefWidth="131.20001792907715" text="Nombre">
+          <cellValueFactory>
+          <PropertyValueFactory property="nombreProducto" />
+          </cellValueFactory>
+          </TableColumn>
+          <TableColumn prefWidth="183.199951171875" text="Marca">
+            <cellValueFactory>
+          <PropertyValueFactory property="marcaProducto" />
+          </cellValueFactory>
+          </TableColumn>
+            <TableColumn prefWidth="132.0" text="Precio Unidad">
+              <cellValueFactory>
+          <PropertyValueFactory property="precioProducto" />
+          </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="173.59988403320312" text="Cantidad">
+              <cellValueFactory>
+          <PropertyValueFactory property="cantidadProducto" />
+          </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <TextField fx:id="NombreNuevo" layoutX="14.0" layoutY="525.0" promptText="Nombre" visible="false" />
+      <TextField fx:id="marcaNuevo" layoutX="182.0" layoutY="525.0" promptText="Marca" visible="false" />
+      <TextField fx:id="cantidadNuevo" layoutX="201.0" layoutY="560.0" promptText="Cantidad" visible="false" />
+      <TextField fx:id="precioNuevo" layoutX="14.0" layoutY="560.0" promptText="Precio" visible="false" />
+      <Button fx:id="but_agregar" layoutX="350.0" layoutY="525.0" mnemonicParsing="false" onAction="#agregarBase" text="Agregar" visible="false" />
+   </children>
+</AnchorPane>

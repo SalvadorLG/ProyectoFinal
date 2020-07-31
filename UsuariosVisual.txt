@@ -1,0 +1,6 @@
+Usuarios para entrar:
+Nombre: Ana
+Contraseña: 123patito
+Nombre 1
+Contraseña: 
+*Requisito para entrar poner la cantidad en la caja*
